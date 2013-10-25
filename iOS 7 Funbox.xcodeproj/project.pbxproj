@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A739519AA124725A875D389 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6FAFAF1F71349388DB9BD4B /* libPods.a */; };
 		BB468DCB1814302C00D99E8F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB468DCA1814302C00D99E8F /* Foundation.framework */; };
 		BB468DCD1814302C00D99E8F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB468DCC1814302C00D99E8F /* CoreGraphics.framework */; };
 		BB468DCF1814302C00D99E8F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB468DCE1814302C00D99E8F /* UIKit.framework */; };
@@ -15,13 +16,15 @@
 		BB468DDB1814302C00D99E8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB468DDA1814302C00D99E8F /* AppDelegate.m */; };
 		BB468DDE1814302C00D99E8F /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB468DDC1814302C00D99E8F /* Main_iPhone.storyboard */; };
 		BB468DE11814302C00D99E8F /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB468DDF1814302C00D99E8F /* Main_iPad.storyboard */; };
-		BB468DE41814302C00D99E8F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB468DE31814302C00D99E8F /* ViewController.m */; };
 		BB468DE61814302C00D99E8F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB468DE51814302C00D99E8F /* Images.xcassets */; };
 		BB468DED1814302C00D99E8F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB468DEC1814302C00D99E8F /* XCTest.framework */; };
 		BB468DEE1814302C00D99E8F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB468DCA1814302C00D99E8F /* Foundation.framework */; };
 		BB468DEF1814302C00D99E8F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB468DCE1814302C00D99E8F /* UIKit.framework */; };
 		BB468DF71814302C00D99E8F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB468DF51814302C00D99E8F /* InfoPlist.strings */; };
 		BB468DF91814302C00D99E8F /* iOS_7_FunboxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB468DF81814302C00D99E8F /* iOS_7_FunboxTests.m */; };
+		BB905EAB181A0B4100D53D5C /* ImageBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB905EAA181A0B4100D53D5C /* ImageBoxViewController.m */; };
+		BBBFA929181A01CB00000894 /* PlaygroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBFA928181A01CB00000894 /* PlaygroundViewController.m */; };
+		BBBFA92B181A06AB00000894 /* scene.JPG in Resources */ = {isa = PBXBuildFile; fileRef = BBBFA92A181A06AB00000894 /* scene.JPG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3180E944A9D14AD78D524B1E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		BB468DC71814302C00D99E8F /* iOS 7 Funbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS 7 Funbox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB468DCA1814302C00D99E8F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BB468DCC1814302C00D99E8F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -47,14 +51,18 @@
 		BB468DDA1814302C00D99E8F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BB468DDD1814302C00D99E8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		BB468DE01814302C00D99E8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		BB468DE21814302C00D99E8F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BB468DE31814302C00D99E8F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BB468DE51814302C00D99E8F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BB468DEB1814302C00D99E8F /* iOS 7 FunboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS 7 FunboxTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB468DEC1814302C00D99E8F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		BB468DF41814302C00D99E8F /* iOS 7 FunboxTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOS 7 FunboxTests-Info.plist"; sourceTree = "<group>"; };
 		BB468DF61814302C00D99E8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BB468DF81814302C00D99E8F /* iOS_7_FunboxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_7_FunboxTests.m; sourceTree = "<group>"; };
+		BB905EA9181A0B4100D53D5C /* ImageBoxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBoxViewController.h; sourceTree = "<group>"; };
+		BB905EAA181A0B4100D53D5C /* ImageBoxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBoxViewController.m; sourceTree = "<group>"; };
+		BBBFA927181A01CB00000894 /* PlaygroundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaygroundViewController.h; sourceTree = "<group>"; };
+		BBBFA928181A01CB00000894 /* PlaygroundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaygroundViewController.m; sourceTree = "<group>"; };
+		BBBFA92A181A06AB00000894 /* scene.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = scene.JPG; path = scene/scene.JPG; sourceTree = "<group>"; };
+		E6FAFAF1F71349388DB9BD4B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +73,7 @@
 				BB468DCD1814302C00D99E8F /* CoreGraphics.framework in Frameworks */,
 				BB468DCF1814302C00D99E8F /* UIKit.framework in Frameworks */,
 				BB468DCB1814302C00D99E8F /* Foundation.framework in Frameworks */,
+				8A739519AA124725A875D389 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +97,7 @@
 				BB468DF21814302C00D99E8F /* iOS 7 FunboxTests */,
 				BB468DC91814302C00D99E8F /* Frameworks */,
 				BB468DC81814302C00D99E8F /* Products */,
+				3180E944A9D14AD78D524B1E /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +117,7 @@
 				BB468DCC1814302C00D99E8F /* CoreGraphics.framework */,
 				BB468DCE1814302C00D99E8F /* UIKit.framework */,
 				BB468DEC1814302C00D99E8F /* XCTest.framework */,
+				E6FAFAF1F71349388DB9BD4B /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -118,10 +129,13 @@
 				BB468DDA1814302C00D99E8F /* AppDelegate.m */,
 				BB468DDC1814302C00D99E8F /* Main_iPhone.storyboard */,
 				BB468DDF1814302C00D99E8F /* Main_iPad.storyboard */,
-				BB468DE21814302C00D99E8F /* ViewController.h */,
-				BB468DE31814302C00D99E8F /* ViewController.m */,
 				BB468DE51814302C00D99E8F /* Images.xcassets */,
+				BBBFA92A181A06AB00000894 /* scene.JPG */,
 				BB468DD11814302C00D99E8F /* Supporting Files */,
+				BBBFA927181A01CB00000894 /* PlaygroundViewController.h */,
+				BBBFA928181A01CB00000894 /* PlaygroundViewController.m */,
+				BB905EA9181A0B4100D53D5C /* ImageBoxViewController.h */,
+				BB905EAA181A0B4100D53D5C /* ImageBoxViewController.m */,
 			);
 			path = "iOS 7 Funbox";
 			sourceTree = "<group>";
@@ -162,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB468DFC1814302C00D99E8F /* Build configuration list for PBXNativeTarget "iOS 7 Funbox" */;
 			buildPhases = (
+				51BA98CE0DC44CBE846E98F3 /* Check Pods Manifest.lock */,
 				BB468DC31814302C00D99E8F /* Sources */,
 				BB468DC41814302C00D99E8F /* Frameworks */,
 				BB468DC51814302C00D99E8F /* Resources */,
+				39A1B841CDD84A64A9E6E8CC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,6 +218,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Nanyi Jiang";
 				TargetAttributes = {
+					BB468DC61814302C00D99E8F = {
+						DevelopmentTeam = DK4UGG8Y5L;
+					};
 					BB468DEA1814302C00D99E8F = {
 						TestTargetID = BB468DC61814302C00D99E8F;
 					};
@@ -231,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBBFA92B181A06AB00000894 /* scene.JPG in Resources */,
 				BB468DE11814302C00D99E8F /* Main_iPad.storyboard in Resources */,
 				BB468DE61814302C00D99E8F /* Images.xcassets in Resources */,
 				BB468DDE1814302C00D99E8F /* Main_iPhone.storyboard in Resources */,
@@ -248,14 +268,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		39A1B841CDD84A64A9E6E8CC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51BA98CE0DC44CBE846E98F3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BB468DC31814302C00D99E8F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB468DE41814302C00D99E8F /* ViewController.m in Sources */,
 				BB468DDB1814302C00D99E8F /* AppDelegate.m in Sources */,
 				BB468DD71814302C00D99E8F /* main.m in Sources */,
+				BB905EAB181A0B4100D53D5C /* ImageBoxViewController.m in Sources */,
+				BBBFA929181A01CB00000894 /* PlaygroundViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,26 +443,34 @@
 		};
 		BB468DFD1814302C00D99E8F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3180E944A9D14AD78D524B1E /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOS 7 Funbox/iOS 7 Funbox-Prefix.pch";
 				INFOPLIST_FILE = "iOS 7 Funbox/iOS 7 Funbox-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		BB468DFE1814302C00D99E8F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3180E944A9D14AD78D524B1E /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOS 7 Funbox/iOS 7 Funbox-Prefix.pch";
 				INFOPLIST_FILE = "iOS 7 Funbox/iOS 7 Funbox-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -474,6 +536,7 @@
 				BB468DFE1814302C00D99E8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BB468DFF1814302C00D99E8F /* Build configuration list for PBXNativeTarget "iOS 7 FunboxTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +545,7 @@
 				BB468E011814302C00D99E8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
