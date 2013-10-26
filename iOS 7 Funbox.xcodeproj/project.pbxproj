@@ -26,6 +26,8 @@
 		BB905EAF181A2CEF00D53D5C /* TourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB905EAD181A2CEF00D53D5C /* TourViewController.m */; };
 		BBBFA929181A01CB00000894 /* PlaygroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBFA928181A01CB00000894 /* PlaygroundViewController.m */; };
 		BBBFA92B181A06AB00000894 /* scene.JPG in Resources */ = {isa = PBXBuildFile; fileRef = BBBFA92A181A06AB00000894 /* scene.JPG */; };
+		BBCF51DF181B704000395D7C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCF51DE181B704000395D7C /* DetailViewController.m */; };
+		BBCF51E2181B731B00395D7C /* TGTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCF51E1181B731B00395D7C /* TGTransitionAnimator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,10 @@
 		BBBFA927181A01CB00000894 /* PlaygroundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaygroundViewController.h; sourceTree = "<group>"; };
 		BBBFA928181A01CB00000894 /* PlaygroundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaygroundViewController.m; sourceTree = "<group>"; };
 		BBBFA92A181A06AB00000894 /* scene.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = scene.JPG; path = scene/scene.JPG; sourceTree = "<group>"; };
+		BBCF51DD181B704000395D7C /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		BBCF51DE181B704000395D7C /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		BBCF51E0181B731B00395D7C /* TGTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGTransitionAnimator.h; sourceTree = "<group>"; };
+		BBCF51E1181B731B00395D7C /* TGTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGTransitionAnimator.m; sourceTree = "<group>"; };
 		E6FAFAF1F71349388DB9BD4B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -141,6 +147,10 @@
 				BB905EAA181A0B4100D53D5C /* ImageBoxViewController.m */,
 				BB905EAC181A2CEF00D53D5C /* TourViewController.h */,
 				BB905EAD181A2CEF00D53D5C /* TourViewController.m */,
+				BBCF51DD181B704000395D7C /* DetailViewController.h */,
+				BBCF51DE181B704000395D7C /* DetailViewController.m */,
+				BBCF51E0181B731B00395D7C /* TGTransitionAnimator.h */,
+				BBCF51E1181B731B00395D7C /* TGTransitionAnimator.m */,
 			);
 			path = "iOS 7 Funbox";
 			sourceTree = "<group>";
@@ -311,11 +321,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBCF51E2181B731B00395D7C /* TGTransitionAnimator.m in Sources */,
 				BB468DDB1814302C00D99E8F /* AppDelegate.m in Sources */,
 				BB468DD71814302C00D99E8F /* main.m in Sources */,
 				BB905EAB181A0B4100D53D5C /* ImageBoxViewController.m in Sources */,
 				BBBFA929181A01CB00000894 /* PlaygroundViewController.m in Sources */,
 				BB905EAF181A2CEF00D53D5C /* TourViewController.m in Sources */,
+				BBCF51DF181B704000395D7C /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

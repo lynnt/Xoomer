@@ -7,24 +7,16 @@
 //
 
 #import "TourViewController.h"
-#import <FXBlurView.h>
+#import "DetailViewController.h"
+#import "TGTransitionAnimator.h"
 
-@interface TourViewController () <UIScrollViewDelegate>
+@interface TourViewController () <UIScrollViewDelegate, UIViewControllerTransitioningDelegate>
 @property (nonatomic) UIImageView *imageView;
-@property (nonatomic) FXBlurView *blurView;
 @property (nonatomic) UIView *snapshot;
 @end
 
 @implementation TourViewController {
     BOOL _inZoomMode;
-}
-
-- (FXBlurView *)blurView {
-    if (!_blurView) {
-        _blurView = [[FXBlurView alloc] init];
-        _blurView.tintColor = [UIColor whiteColor];
-    }
-    return _blurView;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -41,18 +33,12 @@
 }
 
 - (void)zoomToTapped {
-    if (_inZoomMode) {
-        
-    } else {
-        self.blurView.frame = self.view.bounds;
-        self.blurView.alpha = 0;
-        [self.view addSubview:self.blurView];
-        [UIView animateWithDuration:.5 animations:^{
-            self.scrollView.zoomScale = 1.5;
-            self.blurView.alpha = 1;
-        }];
-    }
-    _inZoomMode = !_inZoomMode;
+    UIView *view = [self.scrollView snapshotViewAfterScreenUpdates:NO];
+    DetailViewController *vc = [[DetailViewController alloc] init];
+    vc.backgroundView = view;
+    vc.transitioningDelegate = self;
+    vc.modalTransitionStyle = UIModalPresentationCustom;
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 - (void)viewDidLoad
@@ -81,5 +67,21 @@
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
     return self.imageView;
 }
+
+#pragma mark UIViewControllerAnimatedTransition Delegate methods
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
+                                                                  presentingController:(UIViewController *)presenting
+                                                                      sourceController:(UIViewController *)source {
+    TGTransitionAnimator *animator = [TGTransitionAnimator new];
+    animator.presenting = YES;
+    return animator;
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+    TGTransitionAnimator *animator = [TGTransitionAnimator new];
+    return animator;
+}
+
 
 @end
