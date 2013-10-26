@@ -52,6 +52,9 @@
     if (title) {
         [cell.titleLabelView setText:title];
     }
+    if (item[@"description"]) {
+        [cell.descriptionLabel setText:item[@"description"]];
+    }
     if (image) {
         [cell.imageView setImage:image];
     } else {

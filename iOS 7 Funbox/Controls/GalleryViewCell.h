@@ -11,5 +11,6 @@
 @interface GalleryViewCell : UIButton
 @property (nonatomic) BOOL fullscreen;
 @property (nonatomic) UILabel *titleLabelView;
+@property (nonatomic) UILabel *descriptionLabel;
 - (void)setFullscreen:(BOOL)fullscreen animated:(BOOL)animted;
 @end

@@ -47,7 +47,8 @@
     
     for (NSInteger i = 0; i < 5; i++) {
         NSDictionary *dict = @{@"image": [UIImage imageNamed:@"scene"],
-                               @"title": @"pretty picture"};
+                               @"title": @"pretty picture",
+                               @"description": @"you can scroll left and right and stuff, sttttuuuuuuufffffffffff"};
         [vc addItem:dict];
     }
     
