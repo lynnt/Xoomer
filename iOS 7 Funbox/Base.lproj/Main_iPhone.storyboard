@@ -160,11 +160,13 @@
                         <viewControllerLayoutGuide type="bottom" id="yzI-qy-DOQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hZV-Z6-ePa">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="nGP-Uu-CUM"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <segue destination="9c2-z6-O3U" kind="modal" identifier="Detail" id="7M8-Lq-50v"/>
                     </connections>
@@ -182,9 +184,10 @@
                         <viewControllerLayoutGuide type="bottom" id="aoE-qf-Kc5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Xcs-OI-PnN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8go-tS-UpH" userLabel="First Responder" sceneMemberID="firstResponder"/>

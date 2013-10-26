@@ -36,9 +36,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UIToolbar* bgToolbar = [[UIToolbar alloc] initWithFrame:self.view.frame];
+    UIToolbar* bgToolbar = [[UIToolbar alloc] initWithFrame:self.view.bounds];
     bgToolbar.barStyle = UIBarStyleDefault;
-    [self.view insertSubview:bgToolbar aboveSubview:self.backgroundView];
+    [self.view addSubview:bgToolbar];
 }
 
 - (void)didReceiveMemoryWarning
