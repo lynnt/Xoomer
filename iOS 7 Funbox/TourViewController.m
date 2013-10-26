@@ -10,7 +10,7 @@
 #import "DetailViewController.h"
 #import "TGTransitionAnimator.h"
 
-@interface TourViewController () <UIScrollViewDelegate, UIViewControllerTransitioningDelegate>
+@interface TourViewController () <UIScrollViewDelegate, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate>
 @property (nonatomic) UIImageView *imageView;
 @property (nonatomic) UIView *snapshot;
 @end
@@ -38,8 +38,7 @@
     DetailViewController *detailViewController = segue.destinationViewController;
     UIView *view = [self.scrollView snapshotViewAfterScreenUpdates:NO];
     detailViewController.backgroundView = view;
-    detailViewController.transitioningDelegate = self;
-    detailViewController.modalPresentationStyle = UIModalPresentationCustom;
+    self.navigationController.delegate = self;
 }
 
 - (void)zoomToTapped {
@@ -86,6 +85,12 @@
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
     TGTransitionAnimator *animator = [TGTransitionAnimator new];
+    return animator;
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC {
+    TGTransitionAnimator *animator = [TGTransitionAnimator new];
+    animator.presenting = operation == UINavigationControllerOperationPush;
     return animator;
 }
 

@@ -18,8 +18,6 @@
     UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     
-    // Set our ending frame. We'll modify this later if we have to
-    CGRect endFrame = toViewController.view.bounds;
     
     if (self.presenting) {
         fromViewController.view.userInteractionEnabled = NO;
@@ -28,9 +26,11 @@
         [transitionContext.containerView addSubview:toViewController.view];
         
         toViewController.view.alpha = 0;
+        toViewController.view.transform = CGAffineTransformMakeScale(0.5, 0.5);
+        fromViewController.view.transform = CGAffineTransformIdentity;
         
         [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
-            fromViewController.view.tintAdjustmentMode = UIViewTintAdjustmentModeDimmed;
+            toViewController.view.transform = CGAffineTransformIdentity;
             fromViewController.view.transform = CGAffineTransformMakeScale(1.5, 1.5);
             toViewController.view.alpha = 1;
         } completion:^(BOOL finished) {
@@ -42,12 +42,13 @@
         
         [transitionContext.containerView addSubview:toViewController.view];
         [transitionContext.containerView addSubview:fromViewController.view];
-        
-        endFrame.origin.x += 320;
+        toViewController.view.transform = CGAffineTransformMakeScale(1,1);
+        toViewController.view.frame = fromViewController.view.bounds;
         
         [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
-            toViewController.view.tintAdjustmentMode = UIViewTintAdjustmentModeAutomatic;
-            fromViewController.view.frame = endFrame;
+            fromViewController.view.alpha = 0;
+            fromViewController.view.transform = CGAffineTransformMakeScale(0.5, 0.5);
+            toViewController.view.transform = CGAffineTransformMakeScale(1,1);
         } completion:^(BOOL finished) {
             [transitionContext completeTransition:YES];
         }];

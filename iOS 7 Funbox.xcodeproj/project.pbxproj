@@ -28,6 +28,8 @@
 		BBBFA92B181A06AB00000894 /* scene.JPG in Resources */ = {isa = PBXBuildFile; fileRef = BBBFA92A181A06AB00000894 /* scene.JPG */; };
 		BBCF51DF181B704000395D7C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCF51DE181B704000395D7C /* DetailViewController.m */; };
 		BBCF51E2181B731B00395D7C /* TGTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCF51E1181B731B00395D7C /* TGTransitionAnimator.m */; };
+		BBFF3026181B8FB400DB629A /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBFF3025181B8FB400DB629A /* GalleryViewController.m */; };
+		BBFF3029181B934300DB629A /* GalleryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BBFF3028181B934300DB629A /* GalleryViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,10 @@
 		BBCF51DE181B704000395D7C /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		BBCF51E0181B731B00395D7C /* TGTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGTransitionAnimator.h; sourceTree = "<group>"; };
 		BBCF51E1181B731B00395D7C /* TGTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGTransitionAnimator.m; sourceTree = "<group>"; };
+		BBFF3024181B8FB400DB629A /* GalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryViewController.h; sourceTree = "<group>"; };
+		BBFF3025181B8FB400DB629A /* GalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryViewController.m; sourceTree = "<group>"; };
+		BBFF3027181B934300DB629A /* GalleryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryViewCell.h; sourceTree = "<group>"; };
+		BBFF3028181B934300DB629A /* GalleryViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryViewCell.m; sourceTree = "<group>"; };
 		E6FAFAF1F71349388DB9BD4B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -134,6 +140,7 @@
 		BB468DD01814302C00D99E8F /* iOS 7 Funbox */ = {
 			isa = PBXGroup;
 			children = (
+				BBFF3023181B8F3A00DB629A /* Controls */,
 				BB468DD91814302C00D99E8F /* AppDelegate.h */,
 				BB468DDA1814302C00D99E8F /* AppDelegate.m */,
 				BB468DDC1814302C00D99E8F /* Main_iPhone.storyboard */,
@@ -182,6 +189,17 @@
 				BB468DF51814302C00D99E8F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BBFF3023181B8F3A00DB629A /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				BBFF3024181B8FB400DB629A /* GalleryViewController.h */,
+				BBFF3025181B8FB400DB629A /* GalleryViewController.m */,
+				BBFF3027181B934300DB629A /* GalleryViewCell.h */,
+				BBFF3028181B934300DB629A /* GalleryViewCell.m */,
+			);
+			path = Controls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,8 +340,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBCF51E2181B731B00395D7C /* TGTransitionAnimator.m in Sources */,
+				BBFF3026181B8FB400DB629A /* GalleryViewController.m in Sources */,
 				BB468DDB1814302C00D99E8F /* AppDelegate.m in Sources */,
 				BB468DD71814302C00D99E8F /* main.m in Sources */,
+				BBFF3029181B934300DB629A /* GalleryViewCell.m in Sources */,
 				BB905EAB181A0B4100D53D5C /* ImageBoxViewController.m in Sources */,
 				BBBFA929181A01CB00000894 /* PlaygroundViewController.m in Sources */,
 				BB905EAF181A2CEF00D53D5C /* TourViewController.m in Sources */,
