@@ -165,10 +165,31 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="nGP-Uu-CUM"/>
+                    <connections>
+                        <segue destination="9c2-z6-O3U" kind="modal" identifier="Detail" id="7M8-Lq-50v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mQU-uF-Qi8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-583" y="-857"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="xei-nL-yp0">
+            <objects>
+                <viewController id="9c2-z6-O3U" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1xv-P1-fSm"/>
+                        <viewControllerLayoutGuide type="bottom" id="aoE-qf-Kc5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xcs-OI-PnN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8go-tS-UpH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-20" y="-916"/>
         </scene>
         <!--Playground View Controller-->
         <scene sceneID="vSU-7k-jBu">

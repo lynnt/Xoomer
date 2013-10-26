@@ -32,13 +32,19 @@
     return [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(zoomToTapped)];
 }
 
-- (void)zoomToTapped {
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    [super prepareForSegue:segue sender:sender];
+    
+    DetailViewController *detailViewController = segue.destinationViewController;
     UIView *view = [self.scrollView snapshotViewAfterScreenUpdates:NO];
-    DetailViewController *vc = [[DetailViewController alloc] init];
-    vc.backgroundView = view;
-    vc.transitioningDelegate = self;
-    vc.modalTransitionStyle = UIModalPresentationCustom;
-    [self presentViewController:vc animated:YES completion:nil];
+    detailViewController.backgroundView = view;
+    detailViewController.transitioningDelegate = self;
+    detailViewController.modalPresentationStyle = UIModalPresentationCustom;
+}
+
+- (void)zoomToTapped {
+    [self performSegueWithIdentifier:@"Detail" sender:self];
+    
 }
 
 - (void)viewDidLoad
