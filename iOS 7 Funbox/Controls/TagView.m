@@ -38,9 +38,10 @@
     return self;
 }
 
-- (void)setTag:(Tag *)tag {
+- (void)setT:(Tag *)tag {
     self.titleLabel.text = tag.title;
     self.descriptionLabel.text = tag.description;
+    _t = tag;
 }
 
 - (void)layoutSubviews {

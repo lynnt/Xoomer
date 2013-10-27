@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-
+@class GalleryItem;
 
 @interface GalleryViewController : UIViewController
-- (void)addItem:(NSDictionary *)item;
+- (void)addItem:(GalleryItem *)item;
 - (void)clearItem;
 @end

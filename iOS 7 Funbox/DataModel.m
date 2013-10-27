@@ -43,6 +43,8 @@
         pic1.description = @"A university town in Ontario";
         pic1.image = [UIImage imageNamed:@"scene"];
         
+        Ontario.title = @"ONTARIO";
+        Ontario.description = @"Yours to discover";
         Ontario.items = @[pic1];
         Ontario.position = CGPointMake(300, 300);
         

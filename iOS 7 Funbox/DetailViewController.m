@@ -9,6 +9,7 @@
 #import "DetailViewController.h"
 #import "GalleryViewController.h"
 #import <FXBlurView.h>
+#import "DataModel.h"
 
 @interface DetailViewController ()
 @property (nonatomic) FXBlurView *blurView;
@@ -41,15 +42,18 @@
     bgToolbar.barStyle = UIBarStyleDefault;
     [self.view addSubview:bgToolbar];
     
+    
+}
+
+- (void)setTag:(Tag *)tag {
     GalleryViewController *vc = [[GalleryViewController alloc] init];
     vc.view.frame = CGRectMake(10, 100, self.view.bounds.size.width - 20, 200);
     [self.view addSubview:vc.view];
     
-    for (NSInteger i = 0; i < 5; i++) {
-        NSDictionary *dict = @{@"image": [UIImage imageNamed:@"scene"],
-                               @"title": @"pretty picture",
-                               @"description": @"you can scroll left and right and stuff, sttttuuuuuuufffffffffff"};
-        [vc addItem:dict];
+    for (NSObject *obj in tag.items) {
+        if ([obj class] == [GalleryItem class]) {
+            [vc addItem:(GalleryItem *)obj];
+        }
     }
     
     self.galleyViewController = vc;

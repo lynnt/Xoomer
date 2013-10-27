@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class Tag;
+
 @interface DetailViewController : UIViewController
 @property (nonatomic) UIView *backgroundView;
+@property (nonatomic) Tag *tag;
 @end

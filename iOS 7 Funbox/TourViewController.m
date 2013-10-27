@@ -11,6 +11,7 @@
 #import "TGTransitionAnimator.h"
 #import "TagView.h"
 #import "APLDecorationView.h"
+#import "DataModel.h"
 
 @interface TourViewController () <UIScrollViewDelegate, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate>
 @property (nonatomic) UIImageView *imageView;
@@ -21,6 +22,7 @@
 
 @implementation TourViewController {
     BOOL _inZoomMode;
+    Tag *targetTag;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -42,20 +44,22 @@
     DetailViewController *detailViewController = segue.destinationViewController;
     UIView *view = [self.scrollView snapshotViewAfterScreenUpdates:NO];
     detailViewController.backgroundView = view;
+    detailViewController.tag = targetTag;
     self.navigationController.delegate = self;
 }
 
 - (void)zoomToTapped {
-    [self performSegueWithIdentifier:@"Detail" sender:self];
     
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    Scene *scene = [Scene Canada];
     self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:self.scrollView];
-    UIImage *tourImage = [UIImage imageNamed:@"hitman"];
+    UIImage *tourImage = scene.backgroundImage;
     self.imageView = [[UIImageView alloc] initWithImage:tourImage];
     [self.scrollView addSubview:self.imageView];
     self.scrollView.contentSize = self.imageView.bounds.size;
@@ -74,16 +78,12 @@
     
     CGFloat attachmentLength = 100;
     
-    for (NSInteger i = 0; i < 5; i++) {
+    for (Tag *tag in scene.tags) {
         APLDecorationView *decoView = [[APLDecorationView alloc] initWithFrame:(CGRect){.origin = CGPointZero, .size = self.scrollView.contentSize}];
         [self.scrollView addSubview:decoView];
         
-        TagView *tagView1 = [[TagView alloc] initWithFrame:CGRectMake(300, 100 + 400*i, 300, 80)];
-        Tag *t = [[Tag alloc] init];
-        t.title = @"ONTARIO";
-        t.description = @"WORST PLACE ON EARTH";
+        TagView *tagView1 = [[TagView alloc] initWithFrame:CGRectMake(tag.position.x + attachmentLength, tag.position.y + attachmentLength, 300, 80)];
         
-        tagView1.tag = t;
         [self.scrollView addSubview:tagView1];
         CGPoint attachmentPoint = CGPointMake(tagView1.center.x - attachmentLength, tagView1.center.y - attachmentLength);
         UIView *attachmentView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"AttachmentPoint_Mask"]];
@@ -100,8 +100,20 @@
         [attachmentBehavior setDamping:0.5];
         
         [decoView trackAndDrawAttachmentFromView:attachmentView toView:tagView1 withAttachmentOffset:CGPointZero];
+        
+        // Add user interaction to the tag
+        tagView1.t = tag;
+        
+        UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tagTapped:)];
+        [tagView1 addGestureRecognizer:tapGestureRecognizer];
     }
-    //[self.animator addBehavior:gravityBehavior];
+}
+
+- (void)tagTapped:(UITapGestureRecognizer *)recognizer {
+    if (recognizer.state == UIGestureRecognizerStateEnded) {
+        targetTag = [(TagView *)recognizer.view t];
+        [self performSegueWithIdentifier:@"Detail" sender:self];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -113,7 +125,6 @@
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
     return self.imageView;
 }
-
 
 #pragma mark UIViewControllerAnimatedTransition Delegate methods
 

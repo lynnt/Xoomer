@@ -8,6 +8,7 @@
 
 #import "GalleryViewController.h"
 #import "GalleryViewCell.h"
+#import "DataModel.h"
 
 #define kCellDim 70
 #define kCellGap 5
@@ -38,13 +39,9 @@
     layer.transform = rotationAndPerspectiveTransform;
 }
 
-- (void)addImage:(UIImage *)image {
-    
-}
-
-- (void)addItem:(NSDictionary *)item {
-    UIImage *image = item[@"image"];
-    NSString *title = [item[@"title"] uppercaseString];
+- (void)addItem:(GalleryItem *)item {
+    UIImage *image = item.image;
+    NSString *title = item.title;
     NSInteger index = [self.views count];
     GalleryViewCell *cell = [[GalleryViewCell alloc] initWithFrame:CGRectMake(150 - 30 * index, 50, kCellDim, kCellDim)];
     [self setTransformForCell:cell forIndex:index];
@@ -52,8 +49,8 @@
     if (title) {
         [cell.titleLabelView setText:title];
     }
-    if (item[@"description"]) {
-        [cell.descriptionLabel setText:item[@"description"]];
+    if (item.description) {
+        [cell.descriptionLabel setText:item.description];
     }
     if (image) {
         [cell.imageView setImage:image];

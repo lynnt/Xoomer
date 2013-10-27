@@ -11,7 +11,7 @@
 
 @interface TagView : FXBlurView
 
-@property (nonatomic) Tag *tag;
+@property (nonatomic) Tag *t;
 
 - (void)sizeToFit;
 
