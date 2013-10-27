@@ -7,7 +7,12 @@
 //
 
 #import "FXBlurView.h"
+#import "DataModel.h"
 
 @interface TagView : FXBlurView
+
+@property (nonatomic) Tag *tag;
+
+- (void)sizeToFit;
 
 @end

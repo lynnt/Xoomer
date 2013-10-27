@@ -23,6 +23,8 @@
 		BB468DF71814302C00D99E8F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB468DF51814302C00D99E8F /* InfoPlist.strings */; };
 		BB468DF91814302C00D99E8F /* iOS_7_FunboxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB468DF81814302C00D99E8F /* iOS_7_FunboxTests.m */; };
 		BB6F6160181C7FDE00CF5436 /* TagView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB6F615F181C7FDE00CF5436 /* TagView.m */; };
+		BB6F6163181C802600CF5436 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BB6F6162181C802600CF5436 /* DataModel.m */; };
+		BB6F6166181C8DF200CF5436 /* APLDecorationView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB6F6165181C8DF200CF5436 /* APLDecorationView.m */; };
 		BB905EAB181A0B4100D53D5C /* ImageBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB905EAA181A0B4100D53D5C /* ImageBoxViewController.m */; };
 		BB905EAF181A2CEF00D53D5C /* TourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB905EAD181A2CEF00D53D5C /* TourViewController.m */; };
 		BBBFA929181A01CB00000894 /* PlaygroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBFA928181A01CB00000894 /* PlaygroundViewController.m */; };
@@ -65,6 +67,10 @@
 		BB468DF81814302C00D99E8F /* iOS_7_FunboxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_7_FunboxTests.m; sourceTree = "<group>"; };
 		BB6F615E181C7FDE00CF5436 /* TagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagView.h; sourceTree = "<group>"; };
 		BB6F615F181C7FDE00CF5436 /* TagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagView.m; sourceTree = "<group>"; };
+		BB6F6161181C802600CF5436 /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
+		BB6F6162181C802600CF5436 /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
+		BB6F6164181C8DF200CF5436 /* APLDecorationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLDecorationView.h; sourceTree = "<group>"; };
+		BB6F6165181C8DF200CF5436 /* APLDecorationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLDecorationView.m; sourceTree = "<group>"; };
 		BB905EA9181A0B4100D53D5C /* ImageBoxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBoxViewController.h; sourceTree = "<group>"; };
 		BB905EAA181A0B4100D53D5C /* ImageBoxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBoxViewController.m; sourceTree = "<group>"; };
 		BB905EAC181A2CEF00D53D5C /* TourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourViewController.h; sourceTree = "<group>"; };
@@ -143,6 +149,8 @@
 		BB468DD01814302C00D99E8F /* iOS 7 Funbox */ = {
 			isa = PBXGroup;
 			children = (
+				BB6F6164181C8DF200CF5436 /* APLDecorationView.h */,
+				BB6F6165181C8DF200CF5436 /* APLDecorationView.m */,
 				BBFF3023181B8F3A00DB629A /* Controls */,
 				BB468DD91814302C00D99E8F /* AppDelegate.h */,
 				BB468DDA1814302C00D99E8F /* AppDelegate.m */,
@@ -161,6 +169,8 @@
 				BBCF51DE181B704000395D7C /* DetailViewController.m */,
 				BBCF51E0181B731B00395D7C /* TGTransitionAnimator.h */,
 				BBCF51E1181B731B00395D7C /* TGTransitionAnimator.m */,
+				BB6F6161181C802600CF5436 /* DataModel.h */,
+				BB6F6162181C802600CF5436 /* DataModel.m */,
 			);
 			path = "iOS 7 Funbox";
 			sourceTree = "<group>";
@@ -350,9 +360,11 @@
 				BB468DDB1814302C00D99E8F /* AppDelegate.m in Sources */,
 				BB468DD71814302C00D99E8F /* main.m in Sources */,
 				BBFF3029181B934300DB629A /* GalleryViewCell.m in Sources */,
+				BB6F6166181C8DF200CF5436 /* APLDecorationView.m in Sources */,
 				BB905EAB181A0B4100D53D5C /* ImageBoxViewController.m in Sources */,
 				BBBFA929181A01CB00000894 /* PlaygroundViewController.m in Sources */,
 				BB905EAF181A2CEF00D53D5C /* TourViewController.m in Sources */,
+				BB6F6163181C802600CF5436 /* DataModel.m in Sources */,
 				BBCF51DF181B704000395D7C /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,10 +9,14 @@
 #import "TourViewController.h"
 #import "DetailViewController.h"
 #import "TGTransitionAnimator.h"
+#import "TagView.h"
+#import "APLDecorationView.h"
 
 @interface TourViewController () <UIScrollViewDelegate, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate>
 @property (nonatomic) UIImageView *imageView;
 @property (nonatomic) UIView *snapshot;
+@property (nonatomic) UIDynamicAnimator *animator;
+@property (nonatomic) NSMutableArray *dynamicArray;
 @end
 
 @implementation TourViewController {
@@ -51,7 +55,7 @@
     [super viewDidLoad];
     self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:self.scrollView];
-    UIImage *tourImage = [UIImage imageNamed:@"stuff"];
+    UIImage *tourImage = [UIImage imageNamed:@"hitman"];
     self.imageView = [[UIImageView alloc] initWithImage:tourImage];
     [self.scrollView addSubview:self.imageView];
     self.scrollView.contentSize = self.imageView.bounds.size;
@@ -59,8 +63,45 @@
     self.scrollView.minimumZoomScale = 0.5;
     self.scrollView.delegate = self;
     
+    
     self.navigationItem.rightBarButtonItem = [self zoomToButton];
     
+    self.animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.scrollView];
+    
+    self.dynamicArray = [[NSMutableArray alloc] init];
+    
+    UIGravityBehavior *gravityBehavior = [[UIGravityBehavior alloc] init];
+    
+    CGFloat attachmentLength = 100;
+    
+    for (NSInteger i = 0; i < 5; i++) {
+        APLDecorationView *decoView = [[APLDecorationView alloc] initWithFrame:(CGRect){.origin = CGPointZero, .size = self.scrollView.contentSize}];
+        [self.scrollView addSubview:decoView];
+        
+        TagView *tagView1 = [[TagView alloc] initWithFrame:CGRectMake(300, 100 + 400*i, 300, 80)];
+        Tag *t = [[Tag alloc] init];
+        t.title = @"ONTARIO";
+        t.description = @"WORST PLACE ON EARTH";
+        
+        tagView1.tag = t;
+        [self.scrollView addSubview:tagView1];
+        CGPoint attachmentPoint = CGPointMake(tagView1.center.x - attachmentLength, tagView1.center.y - attachmentLength);
+        UIView *attachmentView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"AttachmentPoint_Mask"]];
+        [self.scrollView addSubview:attachmentView];
+        attachmentView.center = attachmentPoint;
+        
+        
+        UIAttachmentBehavior *pinBehavior = [[UIAttachmentBehavior alloc] initWithItem:attachmentView attachedToAnchor:attachmentPoint];
+        [self.animator addBehavior:pinBehavior];
+        
+        UIAttachmentBehavior *attachmentBehavior = [[UIAttachmentBehavior alloc] initWithItem:tagView1 attachedToItem:attachmentView];
+        [self.animator addBehavior:attachmentBehavior];
+        [gravityBehavior addItem:tagView1];
+        [attachmentBehavior setDamping:0.5];
+        
+        [decoView trackAndDrawAttachmentFromView:attachmentView toView:tagView1 withAttachmentOffset:CGPointZero];
+    }
+    //[self.animator addBehavior:gravityBehavior];
 }
 
 - (void)didReceiveMemoryWarning
@@ -72,6 +113,7 @@
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
     return self.imageView;
 }
+
 
 #pragma mark UIViewControllerAnimatedTransition Delegate methods
 
