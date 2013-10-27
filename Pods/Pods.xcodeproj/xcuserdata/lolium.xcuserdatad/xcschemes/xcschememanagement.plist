@@ -4,7 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-CorePlot.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-FXBlurView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-iOSPlot.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6536D0F021554983A9763CD9</key>
+		<key>06C373FC7F404050A72EB2D2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EB05200FC39241BAB30DD25A</key>
+		<key>52BC4E1818FD4BFCB669FE16</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E6D21B4B40A6482BA1A24DEE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E967CF5CB4A24D28AA1E9364</key>
 		<dict>
 			<key>primary</key>
 			<true/>

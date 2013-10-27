@@ -82,7 +82,7 @@
         APLDecorationView *decoView = [[APLDecorationView alloc] initWithFrame:(CGRect){.origin = CGPointZero, .size = self.scrollView.contentSize}];
         [self.scrollView addSubview:decoView];
         
-        TagView *tagView1 = [[TagView alloc] initWithFrame:CGRectMake(tag.position.x + attachmentLength, tag.position.y + attachmentLength, 300, 80)];
+        TagView *tagView1 = [[TagView alloc] initWithFrame:CGRectMake(tag.position.x * 2 + attachmentLength, tag.position.y * 2 + attachmentLength, 300, 80)];
         
         [self.scrollView addSubview:tagView1];
         CGPoint attachmentPoint = CGPointMake(tagView1.center.x - attachmentLength, tagView1.center.y - attachmentLength);
@@ -103,16 +103,23 @@
         
         // Add user interaction to the tag
         tagView1.t = tag;
+        [self.dynamicArray addObject:tagView1];
         
-        UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tagTapped:)];
-        [tagView1 addGestureRecognizer:tapGestureRecognizer];
     }
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tagTapped:)];
+    [self.scrollView addGestureRecognizer:tapGestureRecognizer];
 }
 
 - (void)tagTapped:(UITapGestureRecognizer *)recognizer {
     if (recognizer.state == UIGestureRecognizerStateEnded) {
-        targetTag = [(TagView *)recognizer.view t];
-        [self performSegueWithIdentifier:@"Detail" sender:self];
+        for (UIView *view in self.dynamicArray) {
+            CGPoint p = [recognizer locationInView:self.scrollView];
+            if (CGRectContainsPoint(view.frame, p)) {
+                targetTag = [(TagView *)view t];
+                [self performSegueWithIdentifier:@"Detail" sender:self];
+            }
+        }
+        
     }
 }
 

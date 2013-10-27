@@ -1,0 +1,5 @@
+#include "Pods-iOSPlot.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/iOSPlot" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/CorePlot" "${PODS_ROOT}/Headers/FXBlurView" "${PODS_ROOT}/Headers/iOSPlot"
+OTHER_LDFLAGS = -ObjC ${PODS_IOSPLOT_OTHER_LDFLAGS}
+PODS_ROOT = ${SRCROOT}

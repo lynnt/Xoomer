@@ -1,10 +1,16 @@
 PODS:
+  - CorePlot (1.4)
   - FXBlurView (1.4.3)
+  - iOSPlot (1.0.1)
 
 DEPENDENCIES:
+  - CorePlot (~> 1.4)
   - FXBlurView (~> 1.4.3)
+  - iOSPlot (~> 1.0.1)
 
 SPEC CHECKSUMS:
+  CorePlot: 620ec9763d92cc0478eae469c515132df317e24e
   FXBlurView: 853142359aece43c3292a1e96c005c210f27b384
+  iOSPlot: 7cf7d52c430dc19db5271a6607ef1545093446c2
 
 COCOAPODS: 0.26.2

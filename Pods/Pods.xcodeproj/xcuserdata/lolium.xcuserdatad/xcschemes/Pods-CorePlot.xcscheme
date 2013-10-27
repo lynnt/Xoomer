@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   version = "1.3"
+   LastUpgradeVersion = "0500">
+   <BuildAction
+      buildImplicitDependencies = "YES"
+      parallelizeBuildables = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForArchiving = "YES"
+            buildForProfiling = "YES"
+            buildForRunning = "YES"
+            buildForTesting = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "libPods-CorePlot.a"
+               BlueprintIdentifier = "E6D21B4B40A6482BA1A24DEE"
+               BuildableIdentifier = "primary"
+               BlueprintName = "Pods-CorePlot">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB">
+      <Testables>
+      </Testables>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      useCustomWorkingDirectory = "NO"
+      launchStyle = "0"
+      debugDocumentVersioning = "YES"
+      ignoresPersistentStateOnLaunch = "NO"
+      allowLocationSimulation = "YES"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB">
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES"
+      savedToolIdentifier = ""
+      shouldUseLaunchSchemeArgsEnv = "YES">
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>

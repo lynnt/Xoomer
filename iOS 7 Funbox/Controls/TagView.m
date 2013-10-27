@@ -26,6 +26,7 @@
         self.descriptionLabel = [[UILabel alloc] init];
         self.descriptionLabel.textColor = [UIColor blackColor];
         self.descriptionLabel.shadowColor = [UIColor whiteColor];
+        self.titleLabel.font = [UIFont boldSystemFontOfSize:20];
         [self addSubview:self.titleLabel];
         [self addSubview:self.descriptionLabel];
         

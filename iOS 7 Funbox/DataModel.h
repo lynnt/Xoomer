@@ -26,6 +26,7 @@
 @property (nonatomic) UIImage *thumbnail;
 @property (nonatomic) NSArray *items;
 @property (nonatomic) CGPoint position;
+@property (nonatomic) NSArray *quotes;
 
 @end
 
